@@ -9,7 +9,10 @@ RUN npm run build
 
 # Step 2: Serve the build with nginx
 FROM nginx:stable-alpine
-COPY --from=build /app/build /usr/share/nginx/html
+
+# Use the correct build output directory for Vite (dist)
+COPY --from=build /app/dist /usr/share/nginx/html
+
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
