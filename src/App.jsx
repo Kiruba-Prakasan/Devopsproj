@@ -2,7 +2,6 @@ import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
 import Blogs from './components/Blogs';
-import Contact from './components/contact';
 import CreateBlog from './components/CreateBlog';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
